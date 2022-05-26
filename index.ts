@@ -3,10 +3,6 @@ import './style.css';
 import { merge, fromEvent, map } from 'rxjs';
 import { scan } from 'rxjs/operators';
 
-const decimal = document.querySelector('input[name="decimal"]');
-const hex = document.querySelector('input[name="hex"]');
-const binary = document.querySelector('input[name="binary"]');
-
 function createInputObservable(input, base) {
   return fromEvent(input, 'keyup').pipe(
     map((event) => {
@@ -15,6 +11,10 @@ function createInputObservable(input, base) {
     }),
   );
 }
+
+const decimal = document.querySelector('input[name="decimal"]');
+const hex = document.querySelector('input[name="hex"]');
+const binary = document.querySelector('input[name="binary"]');
 
 merge(
   createInputObservable(decimal, 10),

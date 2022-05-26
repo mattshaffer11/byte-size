@@ -1,6 +1,6 @@
 import './style.css';
 
-import { merge, fromEvent, map } from 'rxjs';
+import { fromEvent, map, merge } from 'rxjs';
 import { scan } from 'rxjs/operators';
 
 function createInputObservable(input, base) {

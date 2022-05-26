@@ -26,7 +26,7 @@ merge(
       return Number.isNaN(value) ? current : value;
     }, 0)
   )
-  .subscribe((value: number) => {
+  .subscribe((value) => {
     decimal.value = value.toString(10);
     hex.value = value.toString(16).toUpperCase();
     binary.value = value.toString(2);

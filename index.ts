@@ -16,7 +16,6 @@ function createInputObservable(input, base) {
   );
 }
 
-let currentValue = 0;
 merge(
   createInputObservable(decimal, 10),
   createInputObservable(hex, 16),
